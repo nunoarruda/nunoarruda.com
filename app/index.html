@@ -1,10 +1,11 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
-        <title>nunoarruda com</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Nuno is a Frontend Developer. He architects and develops websites and applications using web technologies (i.e. HTML, CSS, and JavaScript) which run natively in a web browser or act as compilation input for non-web browser environments (e.g. PhoneGap or Tidesdk).">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nuno Arruda - Front-End Web Developer</title>
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
@@ -12,6 +13,8 @@
         <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
         <!-- endbower -->
         <!-- endbuild -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -21,17 +24,138 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#hi">Hi!</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="hi">
+            <div class="wrapper">
+                <img src="img/me.jpg" alt="Nuno Arruda's selfie">
+                <h1>Hi! I'm <strong>Nuno Arruda</strong>.</h1>
+                <p>I'm an experienced and professional <strong>Front-End Web Developer</strong> doing freelance, working remotely (telecommute) and looking for great projects to work on.</p>
+                <a href="#work" class="button">Learn about what I do</a>
+            </div>
+        </section>
+        
+        <section id="work">
+            <div class="wrapper">
+                <h2>I build amazing things through code.</h2>
+                <p>I love to translate beautiful, cutting-edge designs into functional user interfaces and build great web applications.</p>
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
+                <ul class="skills">
+                    <li>
+                        <i class="fa fa-code"></i>
+                        <h3>Design to HTML</h3>
+                        <p>I transform visual designs into functional web sites or applications using the proper approach, the latest technologies and the best practices. Mobile-first and responsive FTW!</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-tablet"></i>
+                        <h3>Web &amp; Mobile apps</h3>
+                        <p>I develop mobile web apps and use PhoneGap/Cordova to build mobile hybrid apps for multiple platforms such as iOS, Android, Windows Phone and more.</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-cogs"></i>
+                        <h3>Web Services</h3>
+                        <p>I can provide several web services such as domain name registration, web hosting, content update, newsletter delivery and many other web related services.</p>			
+                    </li>
+                </ul>
 
-          </ul>
-        </div>
+                <p>Wanna see some examples?</p>
+                <a href="#portfolio" class="button">Check out my latest works</a>
+            </div>
+        </section>
+        
+        <section id="portfolio">
+            <div class="wrapper">
+                <h2>Awesome work makes happy clients.</h2>
+                <p>Credit also goes to my fellow designers and back-end developers.</p>
+                <ul class="projects">
+                    <li>
+                        <a href="http://woma.co.il/" target="_blank">
+                            <img src="img/portfolio01.jpg" alt="Woma">
+                            <h3>Woma</h3>
+                            <p>A health website in hebrew for women.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://arquipelagocentrodeartes.azores.gov.pt/" target="_blank">
+                            <img src="img/portfolio02.jpg" alt="Archipelago">
+                            <h3>Archipelago</h3>
+                            <p>Site of a centre for contemporary arts.</p>
+                        </a>
+                    </li>
+                    <li class="no-margin">
+                        <a href="http://www.notaveisazores.com/" target="_blank">
+                            <img src="img/portfolio03.jpg" alt="Notáveis dos Açores">
+                            <h3>Notáveis dos Açores</h3>
+                            <p>Database of notable azorean people.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ceeapla.uac.pt/" target="_blank">
+                            <img src="img/portfolio04.jpg" alt="CEEAplA">
+                            <h3>CEEAplA</h3>
+                            <p>Website of a university centre.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://prociv.azores.gov.pt/" target="_blank">
+                            <img src="img/portfolio05.jpg" alt="SRPCBA">
+                            <h3>SRPCBA</h3>
+                            <p>Website of the azorean civil defense.</p>
+                        </a>
+                    </li>
+                    <li class="no-margin">
+                        <a href="http://www.tiagorosas.com/" target="_blank">
+                            <img src="img/portfolio06.jpg" alt="TR Photography">
+                            <h3>TR Photography</h3>
+                            <p>An online portfolio of a photographer.</p>
+                        </a>
+                    </li>
+                </ul>
 
+                <p>You can also check my <a href="resume.pdf" target="_blank">resume</a>. Want to know more?</p>
+                <a href="#contact" class="button">Get in touch with me</a>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="wrapper">
+                <h2>Want to hire me? Contact me now!</h2>
+                <p>You can hire me on <a href="https://www.odesk.com/o/profiles/users/_~013784ebb6ae7cb27b/" target="_blank">oDesk</a> or <a href="https://www.elance.com/s/nunoarruda/" target="_blank">Elance</a> but feel free to contact me directly.</p>
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button class="button" type="submit">Send Message</button>
+                </form>
+                
+                <footer>
+                    <div class="find-me">
+                        <h3>Find me on ...</h3>
+
+                        <ul class="social">
+                            <li><a target="_blank" href="//twitter.com/nunoarruda" title="Twitter" class="fa fa-twitter"><span>Twitter</span></a></li>
+                            <li><a target="_blank" href="//facebook.com/nunoarruda87" title="Facebook" class="fa fa-facebook"><span>Facebook</span></a></li>
+                            <li><a target="_blank" href="//linkedin.com/in/nunoarruda" title="LinkedIn" class="fa fa-linkedin"><span>LinkedIn</span></a></li>
+                            <li><a target="_blank" href="//plus.google.com/+NunoArruda" title="Google+" class="fa fa-google-plus"><span>Google+</span></a></li>
+                            <li><a target="_blank" href="//github.com/nunoarruda" title="GitHub" class="fa fa-github"><span>GitHub</span></a></li>
+                            <li><a href="skype://nuno-arruda" title="Skype" class="fa fa-skype"><span>Skype</span></a></li>
+                        </ul>
+                    </div>
+
+                    <p class="credits">© 2014 Nuno Arruda | Design: HTML5 UP</p>
+                </footer>
+            </div>
+        </section>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -46,11 +170,11 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-9193539-6');ga('send','pageview');
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
