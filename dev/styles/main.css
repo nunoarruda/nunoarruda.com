@@ -16,8 +16,7 @@
    ========================================================================== */
 /* responsive breakpoints */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body, input, textarea {
@@ -319,11 +318,17 @@ nav a:hover {
 @media (min-width: 40em) {
   .projects li {
     width: 30%;
+    min-height: 360px;
     float: left;
     margin-right: 5%;
   }
   .projects li.no-margin {
     margin-right: 0;
+  }
+}
+@media (min-width: 64em) {
+  .projects li {
+    min-height: 400px;
   }
 }
 .projects li p {

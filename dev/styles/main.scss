@@ -318,11 +318,15 @@ nav {
         box-shadow: $fadedBlack6 0px 0px 0px 1px inset, $fadedBlack4 0px 2px 3px 0px;
         @media (min-width: $screenMedium) {
             width: 30%;
+            min-height: 360px;
             float: left;
             margin-right: 5%;
             &.no-margin {
                 margin-right: 0;
             }
+        }
+        @media (min-width: $screenLarge) {
+            min-height: 400px;
         }
         
         p {
