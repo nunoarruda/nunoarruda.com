@@ -6,3 +6,5 @@ bower_components
 test/bower_components
 .DS_Store
 mail_pass.php
+main.css
+main.css.map
