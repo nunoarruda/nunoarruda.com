@@ -41,9 +41,7 @@ module.exports = function (grunt) {
             options: {
                 livereload: true // enables a live reload server
             },
-            html: {
-                files: ['dev/index.html']
-            },
+            files: ['dev/{,*/}*'],
             sass: {
                 files: ['dev/styles/main.scss'],
                 tasks: ['sass', 'autoprefixer']
