@@ -46,6 +46,12 @@ module.exports = function (grunt) {
                 files: ['dev/styles/main.scss'],
                 tasks: ['sass', 'autoprefixer']
             }
+        },
+        
+        copy: {
+            dist: {
+                files: [{expand: true, cwd: 'dev/', src: ['**', '!{,*/}*.scss', '!{,*/}*.map'], dest: 'dist/'}]
+            }
         }
         
     });
@@ -53,10 +59,12 @@ module.exports = function (grunt) {
     // load plugins
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     
     // setup tasks
     grunt.registerTask('dev', ['sass:dev', 'autoprefixer', 'connect:server', 'watch']);
+    grunt.registerTask('dist', ['copy:dist']);
 
 };
