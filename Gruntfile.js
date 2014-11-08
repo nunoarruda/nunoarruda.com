@@ -52,6 +52,28 @@ module.exports = function (grunt) {
             dist: {
                 files: [{expand: true, cwd: 'dev/', src: ['**', '!{,*/}*.scss', '!{,*/}*.map'], dest: 'dist/'}]
             }
+        },
+        
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseBooleanAttributes: true,
+                    collapseWhitespace: true,
+                    conservativeCollapse: true,
+                    removeAttributeQuotes: true,
+                    removeCommentsFromCDATA: true,
+                    removeEmptyAttributes: true,
+                    removeOptionalTags: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'dist/',
+                    src: '{,*/}*.html',
+                    dest: 'dist/'
+                }]
+            }
         }
         
     });
@@ -60,11 +82,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     
     // setup tasks
     grunt.registerTask('dev', ['sass:dev', 'autoprefixer', 'connect:server', 'watch']);
-    grunt.registerTask('dist', ['copy:dist']);
+    grunt.registerTask('dist', ['sass:dev', 'copy:dist', 'htmlmin:dist']);
 
 };
