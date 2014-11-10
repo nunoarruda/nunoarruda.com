@@ -5,6 +5,11 @@ module.exports = function (grunt) {
     // config plugins
     grunt.initConfig({
         
+        clean: {
+            dev: ["dev/styles/main.css", "dev/styles/main.css.map"],
+            dist: ["dist"]
+        },
+        
         sass: {
             dev: {
                 options: {
@@ -80,6 +85,7 @@ module.exports = function (grunt) {
     
     // load plugins
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
@@ -87,7 +93,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     
     // setup tasks
-    grunt.registerTask('dev', ['sass:dev', 'autoprefixer', 'connect:server', 'watch']);
-    grunt.registerTask('dist', ['sass:dev', 'copy:dist', 'htmlmin:dist']);
+    grunt.registerTask('dev', ['clean:dev', 'sass:dev', 'autoprefixer', 'connect:server', 'watch']);
+    grunt.registerTask('dist', ['clean:dist', 'sass:dev', 'copy:dist', 'htmlmin:dist']);
 
 };
