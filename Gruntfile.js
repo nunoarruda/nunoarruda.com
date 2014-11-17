@@ -18,6 +18,14 @@ module.exports = function (grunt) {
                 files: {
                     'dev/styles/main.css': 'dev/styles/main.scss'
                 }
+            },
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'dev/styles/main.css': 'dev/styles/main.scss'
+                }
             }
         },
         
@@ -94,6 +102,6 @@ module.exports = function (grunt) {
     
     // setup tasks
     grunt.registerTask('dev', ['clean:dev', 'sass:dev', 'autoprefixer', 'connect:server', 'watch']);
-    grunt.registerTask('dist', ['clean:dist', 'sass:dev', 'copy:dist', 'htmlmin:dist']);
+    grunt.registerTask('dist', ['clean:dist', 'sass:dist', 'copy:dist', 'htmlmin:dist']);
 
 };
