@@ -10,6 +10,10 @@ module.exports = function (grunt) {
             dist: ["dist"]
         },
         
+        htmllint: {
+            all: ["dev/{,*/}*.html"]
+        },
+        
         sass: {
             dev: {
                 options: {
@@ -55,6 +59,10 @@ module.exports = function (grunt) {
                 livereload: true // enables a live reload server
             },
             files: ['dev/{,*/}*'],
+            html: {
+                files: ['dev/{,*/}*.html'],
+                tasks: ['htmllint']
+            },
             sass: {
                 files: ['dev/styles/main.scss'],
                 tasks: ['sass', 'autoprefixer']
@@ -99,9 +107,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-html');
     
     // setup tasks
-    grunt.registerTask('dev', ['clean:dev', 'sass:dev', 'autoprefixer', 'connect:server', 'watch']);
+    grunt.registerTask('dev', ['clean:dev', 'htmllint', 'sass:dev', 'autoprefixer', 'connect:server', 'watch']);
     grunt.registerTask('dist', ['clean:dist', 'sass:dist', 'autoprefixer', 'copy:dist', 'htmlmin:dist']);
 
 };
