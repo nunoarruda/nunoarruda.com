@@ -11,7 +11,8 @@ module.exports = function (grunt) {
         },
         
         htmllint: {
-            all: ["dev/{,*/}*.html"]
+            dev: ["dev/{,*/}*.html"],
+            dist: ["dist/{,*/}*.html"]
         },
         
         sass: {
@@ -61,11 +62,11 @@ module.exports = function (grunt) {
             files: ['dev/{,*/}*'],
             html: {
                 files: ['dev/{,*/}*.html'],
-                tasks: ['htmllint']
+                tasks: ['htmllint:dev']
             },
             sass: {
                 files: ['dev/styles/main.scss'],
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass:dev', 'autoprefixer']
             }
         },
         
@@ -110,7 +111,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-html');
     
     // setup tasks
-    grunt.registerTask('dev', ['clean:dev', 'htmllint', 'sass:dev', 'autoprefixer', 'connect:server', 'watch']);
-    grunt.registerTask('dist', ['clean:dist', 'sass:dist', 'autoprefixer', 'copy:dist', 'htmlmin:dist']);
+    grunt.registerTask('dev', ['clean:dev', 'htmllint:dev', 'sass:dev', 'autoprefixer', 'connect', 'watch']);
+    grunt.registerTask('dist', ['clean', 'sass:dist', 'autoprefixer', 'copy', 'htmlmin', 'htmllint:dist']);
 
 };
