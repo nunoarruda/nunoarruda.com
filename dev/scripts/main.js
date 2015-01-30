@@ -41,6 +41,9 @@ $(document).ready(function() {
 			message.focus();
 		}
 		else {
+            // disable button
+            $(this).html('<i class="fa fa-refresh fa-spin"></i>').attr("disabled", 'disabled');
+            
             // store form data
 			var data = {
                 name:    name.val(),
@@ -59,6 +62,9 @@ $(document).ready(function() {
 					
 					// clear form data
 					$('form')[0].reset();
+                    
+                    // restore button
+                    $('.submit-button').removeAttr('disabled').html('Send Message');
 				}
 			});
 		}
