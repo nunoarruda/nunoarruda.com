@@ -1,3 +1,5 @@
+window.onload = function () {
+
 // Smooth Scrolling
 // http://css-tricks.com/snippets/jquery/smooth-scrolling/
 $(function() {
@@ -74,3 +76,5 @@ $(document).ready(function() {
         
 	});
 });
+    
+};
