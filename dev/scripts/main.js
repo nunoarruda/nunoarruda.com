@@ -1,3 +1,26 @@
+// defer loading of css to avoid render-blocking and boost page loading
+var cssList = [
+    '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css',
+    '//fonts.googleapis.com/css?family=Open+Sans:300,600,700',
+    '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
+    '/styles/main.css'
+];
+
+var cb = function() {
+    for (var i in cssList) {
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = cssList[i];
+        var h = document.getElementsByTagName('head')[0];
+        h.appendChild(l);
+    }
+};
+
+var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(cb);
+else window.addEventListener('load', cb);
+
+
 window.onload = function () {
 
 // Smooth Scrolling
