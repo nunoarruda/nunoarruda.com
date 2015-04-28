@@ -72,7 +72,7 @@ module.exports = function (grunt) {
         
         copy: {
             dist: {
-                files: [{expand: true, cwd: 'dev/', src: ['**', '!{,*/}*.scss', '!{,*/}*.map'], dest: 'dist/'}]
+                files: [{expand: true, cwd: 'dev/', src: ['**', '!{,*/}*.scss'], dest: 'dist/'}]
             }
         },
         
