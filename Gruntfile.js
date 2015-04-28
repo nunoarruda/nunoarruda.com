@@ -26,7 +26,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
-                    style: 'compressed'
+                    style: 'compressed',
+                    sourcemap: 'none'
                 },
                 files: {
                     'dev/styles/main.css': 'dev/styles/main.scss'
@@ -35,9 +36,15 @@ module.exports = function (grunt) {
         },
         
         autoprefixer: {
-            single_file: {
+            dev: {
                 options: {
                     map: true
+                },
+                src: 'dev/styles/main.css'
+            },
+            dist: {
+                options: {
+                    map: false
                 },
                 src: 'dev/styles/main.css'
             }
@@ -111,7 +118,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-html');
     
     // setup tasks
-    grunt.registerTask('dev', ['clean:dev', 'htmllint:dev', 'sass:dev', 'autoprefixer', 'connect', 'watch']);
-    grunt.registerTask('dist', ['clean', 'sass:dist', 'autoprefixer', 'copy', 'htmlmin', 'htmllint:dist']);
+    grunt.registerTask('dev', ['clean:dev', 'htmllint:dev', 'sass:dev', 'autoprefixer:dev', 'connect', 'watch']);
+    grunt.registerTask('dist', ['clean', 'sass:dist', 'autoprefixer:dist', 'copy', 'htmlmin', 'htmllint:dist']);
 
 };
