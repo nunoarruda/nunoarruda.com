@@ -49,6 +49,10 @@ body, input, textarea {
     }
 }
 
+body {
+    position: relative;
+}
+
 h1, h2, h3 {
     font-size: 1.25em;
     margin: 0 0 0.4em 0;
@@ -162,6 +166,10 @@ nav {
     
     li {
         display: inline-block;
+        &.active a {
+            background: $darkGrey2;
+            color: $white;
+        }
     }
     
     a {
