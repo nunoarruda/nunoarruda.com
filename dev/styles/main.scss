@@ -326,15 +326,11 @@ nav {
         box-shadow: $fadedBlack6 0px 0px 0px 1px inset, $fadedBlack4 0px 2px 3px 0px;
         @media (min-width: $screenMedium) {
             width: 30%;
-            min-height: 390px;
             float: left;
             margin-right: 5%;
             &.no-margin {
                 margin-right: 0;
             }
-        }
-        @media (min-width: $screenLarge) {
-            min-height: 430px;
         }
         
         p {
@@ -350,6 +346,14 @@ nav {
         color: $lightGrey;
         &:hover h3 {
             color: $darkBlue;
+        }
+        
+        @media (min-width: $screenMedium) {
+            min-height: 390px;
+        }
+        
+        @media (min-width: $screenLarge) {
+            min-height: 430px;
         }
     }
     
