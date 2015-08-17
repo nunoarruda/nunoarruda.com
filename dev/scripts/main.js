@@ -2,7 +2,7 @@
 var cssList = [
     '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css',
     '//fonts.googleapis.com/css?family=Open+Sans:300,600,700',
-    '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
+    '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css',
     '/styles/main.css'
 ];
 
