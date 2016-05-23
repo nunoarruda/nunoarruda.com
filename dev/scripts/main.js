@@ -257,16 +257,17 @@ $(document).ready(function() {
             // store form data
             var data = {
                 name:    name.val(),
-                email:   email.val(),
-                subject: subject.val(),
+                _replyto:   email.val(),
+                _subject: subject.val(),
                 message: message.val()
             };
 
            // send mail via AJAX
             $.ajax({
-                type:    "POST",
-                url:     "sendmail.php",
+                method:  "POST",
+                url:     "https://formspree.io/nuno@nunoarruda.com",
                 data:    data,
+                dataType:"json",
                 success: function() {
                     alert('Your message was sent!\nThank you for contacting me.\nI will respond as soon as possible.');
 
