@@ -50,14 +50,14 @@ module.exports = function (grunt) {
             }
         },
         
-        connect: {
-            server: {
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : 'dev/{,*/}*'
+                },
                 options: {
-                    livereload: true, // injects a live reload script tag
-                    hostname: 'localhost',
-                    port: 9000,
-                    base: 'dev',
-                    open: true
+                    watchTask: true,
+                    server: './dev'
                 }
             }
         },
@@ -109,8 +109,8 @@ module.exports = function (grunt) {
     
     // load plugins
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-html');
     
     // setup tasks
-    grunt.registerTask('dev', ['clean:dev', 'htmllint:dev', 'sass:dev', 'autoprefixer:dev', 'connect', 'watch']);
+    grunt.registerTask('dev', ['clean:dev', 'htmllint:dev', 'sass:dev', 'autoprefixer:dev', 'browserSync:dev', 'watch']);
     grunt.registerTask('dist', ['clean', 'sass:dist', 'autoprefixer:dist', 'copy', 'htmlmin', 'htmllint:dist']);
 
 };
