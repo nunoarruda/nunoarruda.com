@@ -464,11 +464,9 @@ input:first-child {
     }
 }
 
-a[title="Twitter"],a[title="Twitter"]:hover { background-color: $colorTwitter; }
-a[title="Facebook"],a[title="Facebook"]:hover { background-color: $colorFacebook; }
 a[title="LinkedIn"],a[title="LinkedIn"]:hover { background-color: $colorLinkedin; }
-a[title="Google+"],a[title="Google+"]:hover { background-color: $colorGooglePlus; }
 a[title="GitHub"],a[title="GitHub"]:hover { background-color: $colorGithub; }
+a[title="Stack Overflow"],a[title="Stack Overflow"]:hover { background-color: $colorStack; }
 a[title="Skype"],a[title="Skype"]:hover { background-color: $colorSkype; }
 
 .social {
