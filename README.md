@@ -6,7 +6,7 @@ To run the project on your local machine do the following:
 * Install [Node.js](https://nodejs.org)
 * Open your command line tool and go into the project's folder
 * Run the command `npm install` to install all the necessary packages
-* Run the command `grunt dev` to start the development environment
+* Run the command `npx grunt dev` to start the development environment
 
 ## License
 The content of this repository is licensed under the [MIT License](https://github.com/nunoarruda/nunoarruda.com/blob/master/LICENSE).
