@@ -1,1 +1,203 @@
 /* You can add global styles to this file, and also import other style files */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+ Sass mixins
+ ========================================================================== */
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+$lightGrey: #888;
+$lightGrey2: #999;
+$lightGrey3: #bbb;
+$mediumGrey: #555;
+$mediumGrey2: #666;
+$darkGrey: #3e3e3e;
+$darkGrey2: #383838;
+$darkGrey3: #303030;
+$darkGrey4: #282828;
+$darkGrey5: #252525;
+$darkGrey6: #2e2e2e;
+$darkGrey7: #444;
+
+$lightBlue: #76cdf0;
+$lightBlue2: #61b8db;
+$mediumBlue: #3b95c6;
+$darkBlue: #1b75a6;
+$fadedBlue: rgba(97, 184, 219, 0);
+$solidBlue: rgba(48, 141, 196, 1);
+
+$white: #fff;
+$white2: #fafafa;
+$white3: #f4f4f4;
+$fadedWhite: rgba(255, 255, 255, 0.75);
+$fadedWhite2: rgba(255, 255, 255, 0.025);
+$fadedWhite3: rgba(255, 255, 255, 0.1);
+
+$pink: #ea8a95;
+
+$black: #181818;
+$fadedBlack: rgba(0, 0, 0, 0);
+$fadedBlack2: rgba(0, 0, 0, 0.2);
+$fadedBlack3: rgba(0, 0, 0, 0.05);
+$fadedBlack4: rgba(0, 0, 0, 0.1);
+$fadedBlack5: rgba(0, 0, 0, 0.5);
+$fadedBlack6: rgba(0, 0, 0, 0.15);
+
+$colorLinkedin: #006599;
+$colorGithub: #fafafa;
+$colorStack: #f48024;
+$colorSkype: #10bef1;
+
+/* ==========================================================================
+ General setup and styles
+ ========================================================================== */
+
+/* responsive breakpoints */
+$screenMedium: 40em;
+$screenLarge: 64em;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+input,
+textarea {
+  line-height: 1.75em;
+  font-size: 0.813em;
+  font-family: "Open Sans", sans-serif;
+  color: $lightGrey;
+  text-align: center;
+  @media (min-width: $screenMedium) {
+    font-size: 0.938em;
+    line-height: 1.85em;
+  }
+  @media (min-width: $screenLarge) {
+    font-size: 1.063em;
+  }
+}
+
+body {
+  position: relative;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.25em;
+  margin: 0 0 0.4em 0;
+  color: $darkGrey;
+  @media (min-width: $screenMedium) {
+    margin: 0 0 0.75em 0;
+  }
+}
+
+@media (min-width: $screenMedium) {
+  h2 {
+    font-size: 2em;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    letter-spacing: -0.015em;
+  }
+}
+
+a {
+  color: $mediumBlue;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $darkBlue;
+  }
+}
+
+strong,
+b {
+  font-weight: 600;
+  color: $darkGrey;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+h2 + p {
+  font-size: 1.25em;
+  margin: 0 0 2em;
+  @media (min-width: $screenMedium) {
+    margin: 0 0 3em;
+  }
+}
+
+section {
+  padding: 3.5em 0;
+  background-image: url(assets/bg.png);
+  text-shadow: 1px 1px 0px $white;
+  box-shadow: $fadedBlack3 0px 1px 0px 0px inset,
+    $fadedBlack4 0px 2px 3px 0px inset;
+  @media (min-width: $screenMedium) {
+    padding: 5em 0;
+  }
+  @media (min-width: $screenLarge) {
+    padding: 8em 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+}
+
+.button {
+  width: 100%;
+  display: inline-block;
+  color: $white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 1em 0;
+  margin: 0.25em 0 0.875em;
+  border-radius: 8px;
+  text-shadow: -1px -1px 0.5px $fadedBlack5;
+  background: $lightBlue2;
+  background-image: linear-gradient(to bottom, $fadedBlue, $solidBlue);
+  box-shadow: $darkBlue 0px 0px 0px 1px, $fadedWhite 0px 2px 1px 0px inset;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: $lightBlue;
+    color: $white;
+  }
+  @media (min-width: $screenMedium) {
+    width: auto;
+    font-size: 1.5em;
+    letter-spacing: -0.025em;
+    padding: 1em 2.35em;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
