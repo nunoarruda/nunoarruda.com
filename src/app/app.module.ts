@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IntroComponent } from './intro/intro.component';
 import { WorkComponent } from './work/work.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     NavbarComponent,
     IntroComponent,
     WorkComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule

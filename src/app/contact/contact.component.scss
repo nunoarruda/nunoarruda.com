@@ -1,0 +1,168 @@
+@import "../../colors";
+@import "../../responsive";
+
+/* ==========================================================================
+   Contact section
+   ========================================================================== */
+
+#contact {
+  background-color: $darkGrey3;
+  color: $lightGrey2;
+  text-shadow: -1px -1px 0px $black;
+  h2 {
+    color: $white;
+  }
+}
+
+form {
+  margin: 3.2em auto 0;
+  max-width: 720px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 0;
+  padding: 0.75em;
+  font-size: 16px;
+  border-radius: 8px;
+  background: $darkGrey4;
+  box-shadow: $fadedBlack3 0px 2px 5px 0px inset, $fadedWhite2 0px 1px 0px 0px;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin: 0 0 1.5em;
+  color: $lightGrey3;
+  text-align: left;
+  &:focus {
+    background: $darkGrey5;
+  }
+  @media (min-width: $screenMedium) {
+    font-size: 1em;
+  }
+}
+
+textarea {
+  height: 15em;
+  margin-bottom: 2em;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: $mediumGrey;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $mediumGrey;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $mediumGrey;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $mediumGrey;
+}
+
+button {
+  text-align: center;
+  border-style: none;
+  @media (min-width: $screenMedium) {
+    font-size: 1.2em;
+  }
+}
+
+input:first-child {
+  @media (min-width: $screenMedium) {
+    width: 48%;
+    float: left;
+    + input {
+      width: 48%;
+      float: right;
+    }
+  }
+}
+
+.find-me {
+  margin: 4em 0 0;
+  padding: 3em 0;
+  border-top: solid 1px $fadedBlack5;
+  border-bottom: solid 1px $fadedBlack5;
+  box-shadow: $fadedWhite3 0px 1px 0px 0px inset, $fadedWhite3 0px 1px 0px 0px;
+  @media (min-width: $screenMedium) {
+    padding: 5em 0 2em;
+  }
+
+  h3 {
+    color: $white;
+  }
+}
+
+a[title="LinkedIn"],
+a[title="LinkedIn"]:hover {
+  background-color: $colorLinkedin;
+}
+a[title="GitHub"],
+a[title="GitHub"]:hover {
+  background-color: $colorGithub;
+}
+a[title="Stack Overflow"],
+a[title="Stack Overflow"]:hover {
+  background-color: $colorStack;
+}
+a[title="Skype"],
+a[title="Skype"]:hover {
+  background-color: $colorSkype;
+}
+
+.social {
+  padding: 1em 0.5em 0;
+  @media (min-width: $screenMedium) {
+    padding: 0 0.5em 1em;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0.8em;
+  }
+
+  a {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 34px;
+    color: $darkGrey6;
+    text-shadow: 1px 1px 0px $fadedWhite3;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out, top 0.2s ease-in-out;
+    box-shadow: $darkGrey4 0px 0px 0px 1px, $fadedWhite3 0px 2px 1px 0px inset;
+    text-decoration: none;
+    position: relative;
+    top: 0;
+    @media (min-width: $screenMedium) {
+      background: $darkGrey7;
+      background-image: linear-gradient(to bottom, $fadedBlack, $fadedBlack2);
+      &:hover {
+        top: -5px;
+      }
+    }
+  }
+
+  span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+.credits {
+  color: $mediumGrey2;
+  margin-top: 2.5em;
+  @media (min-width: $screenMedium) {
+    font-size: 0.9em;
+    margin-top: 7em;
+  }
+}
