@@ -2,12 +2,41 @@
   <div class="wrapper">
     <h2>Say hello!</h2>
     <p>Or ask me anything.</p>
-    <form autocomplete="on">
-      <input type="text" placeholder="Name" id="name" required />
-      <input type="email" placeholder="Email" id="email" required />
-      <input type="text" placeholder="Subject" id="subject" required />
-      <textarea placeholder="Message" required></textarea>
-      <button class="button submit-button" type="submit">Send Message</button>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+      <input
+        type="text"
+        placeholder="Name"
+        id="name"
+        formControlName="name"
+        required
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        id="email"
+        formControlName="email"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Subject"
+        id="subject"
+        formControlName="subject"
+        required
+      />
+      <textarea
+        placeholder="Message"
+        formControlName="message"
+        required
+      ></textarea>
+      <button
+        class="button submit-button"
+        type="submit"
+        [disabled]="sendingForm"
+      >
+        <ng-container *ngIf="!sendingForm">Send Message</ng-container>
+        <i *ngIf="sendingForm" class="fa fa-refresh fa-spin"></i>
+      </button>
     </form>
 
     <footer>
