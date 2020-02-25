@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "nunoarruda",
+      "public": "dist/nunoarruda",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
