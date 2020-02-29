@@ -1,14 +1,14 @@
-# Nunoarruda
+# nunoarruda.com
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+This repository holds the source and project files of my personal website that I built to showcase myself. The website informs who am I, what I do, showcases my portfolio and also includes a contact form. The website is live at [nunoarruda.com](https://nunoarruda.com/). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+
+## Dependencies
+
+Install [Node.js](https://nodejs.org), the [Angular CLI](https://cli.angular.io/), and run `npm install`.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
