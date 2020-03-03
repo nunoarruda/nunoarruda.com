@@ -9,6 +9,7 @@ import { IntroComponent } from './intro/intro.component';
 import { WorkComponent } from './work/work.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ContactComponent } from './contact/contact.component';
     PortfolioComponent,
     ContactComponent
   ],
-  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
+  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

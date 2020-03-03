@@ -12,18 +12,20 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.4",
+    "@angular/cdk": "^9.1.0",
     "@angular/common": "~9.0.4",
     "@angular/compiler": "~9.0.4",
     "@angular/core": "~9.0.4",
     "@angular/fire": "^5.4.2",
     "@angular/forms": "~9.0.4",
+    "@angular/material": "^9.1.0",
     "@angular/platform-browser": "~9.0.4",
     "@angular/platform-browser-dynamic": "~9.0.4",
     "@angular/router": "~9.0.4",
+    "firebase": ">= 5.5.7 <8",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "firebase": ">= 5.5.7 <8"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.4",
