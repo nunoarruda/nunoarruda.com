@@ -1,3 +1,11 @@
-mat-toolbar {
+// Import theming functions
+@import '~@angular/material/theming';
+
+$primary: mat-palette($mat-indigo);
+
+:host {
   position: fixed;
+  width: 100%;
+  background-color: mat-color($primary);
+  @include mat-elevation(6);
 }
