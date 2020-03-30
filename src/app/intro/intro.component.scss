@@ -1,63 +1,30 @@
-@import "../../responsive";
-@import "../../mixins";
+// Import theming functions
+@import '~@angular/material/theming';
 
-/* ==========================================================================
-   Intro section
-   ========================================================================== */
+$primary: mat-palette($mat-indigo);
 
-#intro {
-  padding-top: 5em;
-  background-image: none;
-  @media (min-width: $screenMedium) {
-    padding-top: 9em;
-  }
-  @media (min-width: $screenLarge) {
-    padding-top: 12em;
-  }
+:host {
+  display: block;
+  background-color: mat-color($primary);
+}
 
-  .wrapper {
-    @include clearfix;
-  }
+.navbar-spacing {
+  padding-top: 64px;
+}
 
-  img {
-    width: 70%;
-    max-width: 340px;
-    margin: 0.625em auto 1.75em;
-    display: block;
-    border-radius: 50%;
-    @media (min-width: $screenMedium) {
-      width: 19.5em;
-      margin: 0 2.5em 0 0;
-      float: left;
-    }
-    @media (min-width: $screenLarge) {
-      width: 20em;
-      margin: 0 2.5em 0 0;
-    }
-  }
+img {
+  width: 70%;
+  max-width: 340px;
+  margin: 0.625em auto 1.75em;
+  display: block;
+  border-radius: 50%;
+}
 
-  h1 {
-    margin: 0.625em 0 1em;
-    font-size: 2.25em;
-    line-height: 1.25em;
-    font-weight: 300;
-    @media (min-width: $screenMedium) {
-      margin-top: 0.35em;
-      font-size: 3.25em;
-      letter-spacing: -0.025em;
-      text-align: left;
-    }
+.wrapper {
+  padding: 10px;
+}
 
-    strong {
-      font-weight: 700;
-    }
-  }
-
-  p {
-    @media (min-width: $screenMedium) {
-      font-size: 1.5em;
-      line-height: 1.75em;
-      text-align: left;
-    }
-  }
+h1,
+p {
+  color: white;
 }

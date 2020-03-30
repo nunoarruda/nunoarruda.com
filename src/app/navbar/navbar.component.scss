@@ -8,4 +8,5 @@ $primary: mat-palette($mat-indigo);
   width: 100%;
   background-color: mat-color($primary);
   @include mat-elevation(6);
+  z-index: 1;
 }
