@@ -56,7 +56,7 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.8.3",
     "@angular-devkit/architect": "^0.901.0",
-    "firebase-tools": "^7.16.2",
+    "firebase-tools": "^8.0.0",
     "fuzzy": "^0.1.3",
     "inquirer": "^6.5.2",
     "inquirer-autocomplete-prompt": "^1.0.2"
