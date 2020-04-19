@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -33,6 +34,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     FontAwesomeModule,
     FlexLayoutModule,
   ],

@@ -9,7 +9,7 @@ $primary: mat-palette($mat-indigo);
 }
 
 .navbar-spacing {
-  padding-top: 64px;
+  padding-top: calc(64px * 2);
 }
 
 img {
