@@ -1,64 +1,24 @@
-@import "../../colors";
-@import "../../responsive";
-@import "../../mixins";
+// Import theming functions
+@import '~@angular/material/theming';
 
-/* ==========================================================================
-   Portfolio section
-   ========================================================================== */
+$primary: mat-palette($mat-indigo);
 
-#portfolio {
-  background-color: $white3;
+:host {
+  display: block;
+  background-color: mat-color($primary);
 }
 
-.projects {
-  li {
-    margin: 0.625em 0 3em;
-    background: $white;
-    box-shadow: $fadedBlack6 0px 0px 0px 1px inset, $fadedBlack4 0px 2px 3px 0px;
-    @media (min-width: $screenMedium) {
-      width: 30%;
-      float: left;
-      margin-right: 5%;
-      &.no-margin {
-        margin-right: 0;
-      }
-    }
+.heading-content {
+  text-align: center;
+  color: white;
+}
 
-    p {
-      margin: 0 0.6em;
-    }
-  }
-  @include clearfix;
+.container-padless {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-  a {
-    display: block;
-    text-decoration: none;
-    padding-bottom: 1.875em;
-    color: $lightGrey;
-    &:hover h3 {
-      color: $darkBlue;
-    }
-
-    @media (min-width: $screenMedium) {
-      min-height: 390px;
-    }
-
-    @media (min-width: $screenLarge) {
-      min-height: 430px;
-    }
-  }
-
-  img {
-    display: block;
-    width: 100%;
-  }
-
-  h3 {
-    margin: 1.2em 0.6em 0.25em;
-    transition: color 0.2s ease-in-out;
-  }
-
-  + p {
-    font-size: 1.25em;
-  }
+mat-card {
+  margin: 15px;
 }
