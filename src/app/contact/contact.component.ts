@@ -1,24 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import {
+  faLinkedin,
+  faStackOverflow,
+  faGithub,
+  faSkype,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  contactForm: FormGroup;
+  contactForm = this.formBuilder.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
+  });
   sendingForm = false;
+  faLinkedin = faLinkedin;
+  faStackOverflow = faStackOverflow;
+  faGithub = faGithub;
+  faSkype = faSkype;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
-    this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      subject: ['', Validators.required],
-      message: ['', Validators.required]
-    });
-  }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
 
   ngOnInit(): void {}
 
@@ -40,7 +48,7 @@ export class ContactComponent implements OnInit {
         name: data.name,
         _replyto: data.email,
         _subject: data.subject,
-        message: data.message
+        message: data.message,
       };
 
       // send mail via AJAX
