@@ -7,6 +7,7 @@ import {
   faGithub,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -25,6 +26,7 @@ export class ContactComponent implements OnInit {
   faStackOverflow = faStackOverflow;
   faGithub = faGithub;
   faSkype = faSkype;
+  faSpinner = faSpinner;
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
 

@@ -42,7 +42,7 @@
         [disabled]="!contactForm.valid || contactForm.pristine || sendingForm"
       >
         <ng-container *ngIf="!sendingForm">Send Message</ng-container>
-        <i *ngIf="sendingForm" class="fa fa-refresh fa-spin"></i>
+        <fa-icon *ngIf="sendingForm" [icon]="faSpinner" [spin]="true"></fa-icon>
       </button>
     </div>
   </form>
