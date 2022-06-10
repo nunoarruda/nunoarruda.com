@@ -179,6 +179,8 @@ textarea {
   @media only screen and (max-width: 37.5em) {
     .text-primary {
       font-size: 2rem; } }
+  .text-primary a {
+    text-decoration: underline; }
 
 .d-none {
   display: none; }
