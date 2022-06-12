@@ -36,3 +36,45 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = './'
 })
+
+const form = document.getElementById("my-form");
+const formButton = document.getElementById("my-form-button");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  formButton.disabled = true;
+  formButton.classList.remove('btn--theme');
+  formButton.innerText = 'Sending...';
+  const data = new FormData(event.target);
+
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      alert('Your message was sent!\nThank you for contacting me.\nI will respond as soon as possible.');
+      form.reset();
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          alert(data["errors"].map(error => error["message"]).join(", "));
+        } else {
+          alert("Oops!\nThere was a problem submitting the form.");
+        }
+      })
+    }
+    formButton.disabled = false;
+    formButton.classList.add('btn--theme');
+    formButton.innerText = 'Send';
+  }).catch(error => {
+    alert("Oops!\nThere was a problem submitting the form.");
+    formButton.disabled = false;
+    formButton.classList.add('btn--theme');
+    formButton.innerText = 'Send';
+  });
+}
+
+form.addEventListener("submit", handleSubmit)
