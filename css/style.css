@@ -404,6 +404,9 @@ textarea {
       .contact__btn {
         width: 100%; } }
 
+.gotcha {
+  display: none; }
+
 .header {
   position: fixed;
   width: 100%;
