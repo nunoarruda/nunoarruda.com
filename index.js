@@ -37,7 +37,8 @@ headerLogoConatiner.addEventListener('click', () => {
   location.href = './'
 })
 
-const form = document.getElementById("my-form");
+// Disabled in favor of reCAPTCHA for better spam protection
+/* const form = document.getElementById("my-form");
 const formButton = document.getElementById("my-form-button");
 
 async function handleSubmit(event) {
@@ -77,4 +78,4 @@ async function handleSubmit(event) {
   });
 }
 
-form.addEventListener("submit", handleSubmit)
+form.addEventListener("submit", handleSubmit) */
